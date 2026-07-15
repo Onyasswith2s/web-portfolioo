@@ -6,7 +6,6 @@
 * {
     margin: 0;
     padding: 0;
-    grid-template-columns: repeat(auto-fit, minmax (350px, 1fr));
 }
 
 body {
@@ -27,48 +26,48 @@ a,
     transition: all 300ms ease;
 }
 
-/*DESKTOP NAV*/
-
-#desktop-nav {
-    height: 250px;
+/* ==========================================================================
+   3. HEADER & NAVIGATION STYLES
+   ========================================================================== */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #e2e8f0;
+    backdrop-filter: blur(8px);
 }
 
-nav,
-.nav-links {
+.nav-container {
     display: flex;
-}
-nav {
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 17vh;
-}
-
-.nav-links {
-    gap: 2rem;
-    list-style: none;
-    font-size: 1.5rem;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-    text-decoration-color: white;
-}
-
-a:hover {
-    color: grey;
-    text-decoration:underline;
-    text-underline-offset: 0.3rem;
-    text-decoration-color: rgb(181, 181, 181);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.25rem 1.5rem;
 }
 
 .logo {
-    font-size: 3rem;
-    margin-right: 5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
 }
 
-.logo:hover{
-    cursor: default;
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #2563eb; /* Primary accent branding blue color */
 }
 
 /*HUMBERGER MENU*/
@@ -80,6 +79,7 @@ a:hover {
 .hamburger-menu {
     position: relative;
     display: inline-block;
+    margin-right: 3rem;
 }
 
 .hamburger-icon {
@@ -105,12 +105,15 @@ a:hover {
 .menu-links {
     position: absolute;
     top: 100%;
-    right: 0%;
+    right: 0;
+    left: auto;
     background-color: white;
-    width: fit-content;
+    width: max-content;
+    max-width: calc(100vw - 2rem);
     max-height: 0;
+    box-sizing: border-box;
     overflow: hidden;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-links a {
@@ -120,7 +123,8 @@ a:hover {
     font-size: 1.5rem;
     color: black;
     text-decoration: none;
-    transition: all 0.3 ease-in-out;
+    overflow-wrap: break-word;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-links li{
@@ -129,6 +133,7 @@ a:hover {
 
 .menu-links.open {
     max-height: 300px;
+    margin-right: 3rem;
 }
 
 .menu-links:hover a {
@@ -168,56 +173,68 @@ section {
     display: flex;
 }
 
-/*PROFILE SECTION*/
-#profile{
+/* ==========================================================================
+   4. HERO / PROFILE SECTION STYLES
+   ========================================================================== */
+.hero-container {
     display: flex;
-    justify-content: center;
-    gap: 5rem;
-    height: 40vh;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    gap: 4rem;
 }
 
-.section__pic-container {
-    display: flex;
-    margin: auto 0;
-    height: 400px;
-    width: 400px;
+.profile-pic-box {
+    flex-shrink: 0;
 }
 
-.profile-pic {
-    height: 400px;
-    width: 400px;
+.profile-img {
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 2em;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border: 4px solid #ffffff;
+    outline: 2px solid #e2e8f0;
 }
 
-.section__text {
-    align-self: center;
-    text-align: center;
-    margin-top: 2rem;
+.hero-text-box {
+    max-width: 600px;
 }
 
-.section-text p {
+.subtitle {
+    font-size: 1.1rem;
+    color: #2563eb;
     font-weight: 600;
-}
-.section__text__p {
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.title {
-    font-size: 3em;
-    text-align: center;
+.main-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #0f172a;
+    margin-bottom: 1.25rem;
 }
-#social-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    gap: 1rem;
+
+.highlight {
+    color: #2563eb;
+}
+
+.bio-text {
+    font-size: 1.05rem;
+    color: #475569;
+    margin-bottom: 1.5rem;
 }
 
 /*ICONS*/
+
+#social-containers {
+    display: flex;
+    justify-content: center;
+}
 .icon {cursor: pointer;
     height: 2rem;
 }
@@ -269,126 +286,181 @@ section {
     gap: 1rem;
 }
 
-/*ABOUT SECTION*/
-
-#about {
-    position: relative;
-    /*margin-left: 10rem;
+/* ==========================================================================
+   5. ABOUT ME SECTION STYLES
+   ========================================================================== */
+.about-img-box {
     display: flex;
     justify-content: center;
-    gap: 5rem;
-    height: 40vh;*/
 }
 
-.about-container {
-    gap: 2rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    height: 40vh;
-}
-
-.about-details-container {
-    justify-content: center;
-    flex-direction: column;
-    display: flex;
-    height: 30vh;
-    margin-top: 2rem;
-}
-
-.about__pic {
-   width: 450px;
-   height: 600px;
-   object-fit: cover;
-   border-radius: 3rem;
-}           
-
-.icon-arrow {
-    position: absolute;
-    right: -1.5rem;
-    bottom: 15rem;
-    width: 35px;
-    cursor: pointer;
-
-}
-
-.detail-container {
-    padding: 1.5rem;
-    flex: 1;
-    background: white;
-    border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
-    text-align: center;
-    overflow: hidden;
-}
-
-.about-text-p {
-    text-align: center;
-    font-size: 1rem;
-    margin-top: 2.5rem;
-}
-
-.about-container {
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
     gap: 4rem;
-    height: 40%;
-    overflow: hidden;
-
+    align-items: center;
 }
 
-.about__pic-container {
-    height: 650px;
-    width: 500px;
-    margin: auto;
+.about-img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
-.about__title {
-    text-align: center;
-}
-
-.about__text_p1 {
-    text-align: center;
-}
-
-/*EXPERIENCE SECTION*/
-#experience {
-    position: relative;
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-.exp-sub-title {
-    color: rgb(85, 85, 85);
+.info-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    size: 3rem;
+    width: 15rem;
+}
+
+.card-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.75rem;
+}
+
+.info-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+}
+
+.info-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.about-narrative {
+    color: #475569;
+    font-size: 1rem;
+}
+
+#about.section-wrapper {
+    background-color: #cbd5e1;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    align-items: center;
+}
+
+#about .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   6. SKILLS & EXPERIENCE SECTION STYLES
+   ========================================================================== */
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.tech-panel {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2.25rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.panel-title {
+    font-size: 1.25rem;
+    color: #334155;
+    margin-bottom: 1.75rem;
+    text-align: center;
     font-weight: 600;
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
 }
 
-.exp-detail-container {
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.skill-item {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-.artical-container {
-    display: flex;
-    text-align: initial;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 2.5rem;
-    justify-content: space-around;
+.check-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
 }
 
-.artical {
-    display: flex;
-    width: 10rem;
-    justify-content: space-around;
-    gap: 0.5rem;
+.skill-name {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #0f172a;
 }
 
-.artical .icon {
-    cursor: default;
+/* ==========================================================================
+   7. PROJECT PLACEHOLDER SECTION STYLES
+   ========================================================================== */
+.placeholder-project-card {
+    background: #ffffff;
+    border: 2px dashed #cbd5e1;
+    border-radius: 16px;
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.placeholder-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.placeholder-project-card h3 {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+}
+
+.placeholder-project-card p {
+    color: #64748b;
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    align-items: center;
+}
+
+#projects.section-wrapper {
+    background-color: #cbd5e1;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    align-items: center;
+}
+
+.section-tagline {
+    text-align: center;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.container {
+    align-items: center;
 }
 
 /*CONTACT*/
@@ -433,11 +505,41 @@ section {
 
 /*FOOTER SECTION*/
 
-.footer {
-    height: 26vh;
-    margin: 0 1rem;
+footer {
+    background-color: #0f172a; /* Sophisticated deep slate dark footer tone */
+    color: #94a3b8;
+    padding: 4rem 0 3rem;
+    text-align: center;
+    margin-block-end: 28px;
+    margin-bottom: 28px;
 }
 
-.footer p{
-    text-align: center;
+.foot { 
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-bottom: 0rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.copyright {
+    font-size: 0.875rem;
+    color: #64748b;
 }
