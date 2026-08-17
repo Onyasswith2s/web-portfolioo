@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="styles/mediaqueries.css">
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo"> Powell Collins</div>
-        <div>
+    <header>
+     <nav class="nav-container" aria-label="Main Navigation">
+            <div class="logo">Powell Collins</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contacts</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+        </header>
     <nav id="hamburger-nav">
         <div class="logo"> Powell Collins</div>
         <div class="hamburger-menu">
@@ -35,18 +35,20 @@
             </div>
         </div>
     </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img class="profile-pic" src="./assets/profile pic.jpeg" alt="Powell Collins profile picture">
-        </div>
-      <div class="section__text">
-            <p class="section__text__p">Hi, I'm Powell Collins 💻</p>
-            <h1 class="title">FRONT-END <br> WEB DEVELOPER</h1>
-            <p class="section__text__p">I'm a junior web developer and vibe coder who just loves bringing cool ideas to life on the screen. My go-to stack is <strong>React and Tailwind CSS</strong> for building clean, 
-            responsive frontends, and I like using <strong>AI tools</strong> to speed up my workflow and ship things fast. Whether I'm tweaking a UI layout, 
-            I always focus on practical code that actually works. For me, web dev is the perfect mix of figuring out how things work and creating something that feels effortless to use.
-        </p>
-        <div class="btn-container">
+    <section id="hero" class="section-wrapper">
+            <div class="hero-container">
+                <div class="profile-pic-box">
+                    <img alt="Powell Collins professional portrait" src="./assets/profile pic.jpeg" class="profile-img">
+                </div>
+         <div class="hero-text-box">
+                    <p class="subtitle">Hi, I'm Powell Collins 💻</p>
+                    <h1 class="main-title">FRONT-END <br><span class="highlight">WEB DEVELOPER</span></h1>
+                    <p class="bio-text">
+                        I'm a junior web developer who loves bringing cool ideas to life on the screen. My go-to stack is <strong>React and Tailwind CSS</strong> for building clean, 
+                        responsive frontends, and I like using modern developer tools to speed up my workflow and ship things fast. Whether I'm tweaking a UI layout, 
+                        I always focus on practical code that actually works. For me, web dev is the perfect mix of figuring out how things work and creating something that feels effortless to use.
+                    </p>
+          <div class="btn-container">
             <button class="btn__color-2 btn" 
             onclick="window.open('./assets/RESUME.pdf')">Download CV
          </button>
@@ -56,7 +58,7 @@
             </div>
                <div class="social-containers">
                 <img src="./assets/linkedin.png" alt="My linkedin profile"
-               class="icon" onclick="location.href='https://www.linkedin.com/in/powell-collins-b70583198'">
+               class="icon" onclick="location.href='https://www.linkedin.com/in/powellcollins'">
                <img src="./assets/github.png" alt="My github profile"
              class="icon" onclick="location.href='https://www.github.com/Onyasswith2s'">
             </div>
