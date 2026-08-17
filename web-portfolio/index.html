@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mediaqueries.css">
+</head>
+<body>
+    <header>
+     <nav class="nav-container" aria-label="Main Navigation">
+            <div class="logo">Powell Collins</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        </header>
+    <nav id="hamburger-nav">
+        <div class="logo"> Powell Collins</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contacts</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="hero" class="section-wrapper">
+            <div class="hero-container">
+                <div class="profile-pic-box">
+                    <img alt="Powell Collins professional portrait" src="./assets/profile pic.jpeg" class="profile-img">
+                </div>
+         <div class="hero-text-box">
+                    <p class="subtitle">Hi, I'm Powell Collins 💻</p>
+                    <h1 class="main-title">FRONT-END <br><span class="highlight">WEB DEVELOPER</span></h1>
+                    <p class="bio-text">
+                        I'm a junior web developer who loves bringing cool ideas to life on the screen. My go-to stack is <strong>React and Tailwind CSS</strong> for building clean, 
+                        responsive frontends, and I like using modern developer tools to speed up my workflow and ship things fast. Whether I'm tweaking a UI layout, 
+                        I always focus on practical code that actually works. For me, web dev is the perfect mix of figuring out how things work and creating something that feels effortless to use.
+                    </p>
+          <div class="btn-container">
+            <button class="btn__color-2 btn" 
+            onclick="window.open('./assets/RESUME.pdf')">Download CV
+         </button>
+            <button class="btn__color-1 btn" 
+            onclick="location.href='./#contact'">contact info
+         </button>
+            </div>
+               <div class="social-containers">
+                <img src="./assets/linkedin.png" alt="My linkedin profile"
+               class="icon" onclick="location.href='https://www.linkedin.com/in/powellcollins'">
+               <img src="./assets/github.png" alt="My github profile"
+             class="icon" onclick="location.href='https://www.github.com/Onyasswith2s'">
+            </div>
+        </div>
+    </section>
+    <section id="about" class="section-wrapper bg-alt">
+            <div class="container">
+                <p class="section-tagline">Get to know More</p>
+                <h2 class="section-title">About Me</h2>
+                
+                <div class="about-grid">
+                    <div class="about-img-box">
+                       <img alt="Powell working on programming concepts" src="./assets/about me.png" class="about-img">
+                    </div>
+                    <div class="about-content">
+                        <div class="card-grid">
+                            <div class="info-card">
+                                <img alt="" src="./assets/experience.png" class="card-icon">
+                                <h3>Experience</h3>
+                                <p>Junior<br>Web Developer</p>
+                            </div>
+                            <div class="info-card">
+                                <img alt="" src="./assets/education.png" class="card-icon">
+                                <h3>Education</h3>
+                                <p>KCA University<br>Diploma in ICT</p>
+                            </div>
+                        </div>
+                        <p class="about-narrative">
+                            I'm currently pursuing my Diploma at KCA University, 
+                            where I'm building a solid technical foundation. On the development side, 
+                            my experience is all about hands-on execution—in fact, 
+                            this very portfolio is my first official website! 
+                            I'm using it as a live sandbox to push my junior web development skills to the next level, 
+                            blending what I learn in class with modern tools like React and Tailwind CSS. For me, every layout on this site is proof of my journey, 
+                            my tech curiosity, and my obsession with turning clean code into smooth user experiences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section id="experience" class="section-wrapper">
+            <div class="container">
+                <p class="section-tagline">Explore My Technical Stack</p>
+                <h2 class="section-title">Experience</h2>
+                
+                <div class="experience-grid">
+                    <div class="tech-panel">
+                        <h3 class="panel-title">Frontend Development</h3>
+                        <div class="skills-list">
+                            <article class="skill-item">
+                                <img alt="" src="./assets/checkmark.png" class="check-icon">
+                                <span class="skill-name">HTML</span>
+                            </article>
+                            <article class="skill-item">
+                                <img alt="" src="./assets/checkmark.png" class="check-icon">
+                                <span class="skill-name">CSS</span>
+                            </article>
+                            <article class="skill-item">
+                                <img alt="" src="./assets/checkmark.png" class="check-icon">
+                                <span class="skill-name">JavaScript</span>
+                            </article>
+                            <article class="skill-item">
+                                <img alt="" src="./assets/checkmark.png" class="check-icon">
+                                <span class="skill-name">TypeScript</span>
+                            </article>
+                            <article class="skill-item">
+                                <img alt="" src="./assets/checkmark.png" class="check-icon">
+                                <span class="skill-name">Material UI</span>
+                            </article>
+                            <article class="skill-item">
+                                <img alt="" src="./assets/checkmark.png" class="check-icon">
+                                <span class="skill-name">UI Design</span>
+                            </article>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-panel">
+                        <h3 class="panel-title">Backend & Tools</h3>
+                        <div class="skills-list">
+                            <article class="skill-item">
+                                <img alt="" src="./assets/checkmark.png" class="check-icon">
+                                <span class="skill-name">PostgreSQL</span>
+                            </article>
+                            <article class="skill-item">
+                                <img alt="" src="./assets/checkmark.png" class="check-icon">
+                                <span class="skill-name">Node.js</span>
+                            </article>
+                            <article class="skill-item">
+                                <img alt="" src="./assets/checkmark.png" class="check-icon">
+                                <span class="skill-name">Express</span>
+                            </article>
+                            <article class="skill-item">
+                                <img alt="" src="./assets/checkmark.png" class="check-icon">
+                                <span class="skill-name">Git</span>
+                            </article>
+                            <article class="skill-item">
+                                <img alt="" src="./assets/checkmark.png" class="check-icon">
+                                <span class="skill-name">Supabase</span>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+   <section id="projects" class="section-wrapper bg-alt">
+            <div class="container">
+                <p class="section-tagline">Browse My Recent Builds</p>
+                <h2 class="section-title">Projects</h2>
+                <div class="placeholder-project-card">
+                    <p class="placeholder-emoji">🔨</p>
+                    <h3>Applications in Development</h3>
+                    <p>Exciting projects are currently being written. Check back soon to see live builds featuring dynamic user interfaces built with React, utility-driven layout via Tailwind CSS, and cloud database features.</p>
+                </div>
+            </div>
+        </section>
+    <section id="contact">
+        <p class="about__text_p1">Get in Touch</p>
+        <h1 class="title">Contact me</h1>
+        <div class="contact-info--upper-container">
+          <div class="contact-info-container">
+            <img class="icon email-icon"
+            src="./assets/email.png" 
+            alt="Email Icon">
+            <p><a href="mailto:powellcollins00@gmail.com">
+            powellcollins00@gmail.com </a>
+            </p>
+          </div>
+          <div class="contact-info-container">
+            <img class="icon contact-icon"
+            src="./assets/linkedin.png" 
+            alt="linkedin Icon">
+            <p><a href="https://www.linkedin.com/in/powell-collins-a682a32ba/">
+            Linkedin</a>
+            </p>
+          </div>
+        </div>
+    </section>
+    <footer class="foot">
+        <nav aria-label="Footer Nav">
+            <ul class="footer-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="copyright">Copyright &copy; 2026 Powell Collins. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
