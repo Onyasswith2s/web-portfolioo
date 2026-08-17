@@ -1,0 +1,547 @@
+/*GENERAL*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:"PT Sans", sans-serif; 
+}
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/*TRANSITION*/
+
+a, 
+.btn {
+    transition: all 300ms ease;
+}
+
+/* ==========================================================================
+   3. HEADER & NAVIGATION STYLES
+   ========================================================================== */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #e2e8f0;
+    backdrop-filter: blur(8px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.25rem 1.5rem;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #2563eb; /* Primary accent branding blue color */
+}
+
+/*HUMBERGER MENU*/
+
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+    margin-right: 3rem;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 30px;
+    height: 2px;
+    background-color:black;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-line {
+    font-size: small;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto;
+    background-color: white;
+    width: max-content;
+    max-width: calc(100vw - 2rem);
+    max-height: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    overflow-wrap: break-word;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links li{
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+    margin-right: 3rem;
+}
+
+.menu-links:hover a {
+    color: grey;
+    transition: color, 0.3s, ease-in-out;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+    opacity: 1;
+}
+
+/*SECTIONS*/
+section {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+
+.section-container {
+    display: flex;
+}
+
+/* ==========================================================================
+   4. HERO / PROFILE SECTION STYLES
+   ========================================================================== */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    gap: 4rem;
+}
+
+.profile-pic-box {
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border: 4px solid #ffffff;
+    outline: 2px solid #e2e8f0;
+}
+
+.hero-text-box {
+    max-width: 600px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #2563eb;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #0f172a;
+    margin-bottom: 1.25rem;
+}
+
+.highlight {
+    color: #2563eb;
+}
+
+.bio-text {
+    font-size: 1.05rem;
+    color: #475569;
+    margin-bottom: 1.5rem;
+}
+
+/*ICONS*/
+
+#social-containers {
+    display: flex;
+    justify-content: center;
+}
+.icon {cursor: pointer;
+    height: 2rem;
+}
+
+/*BUTTONS*/
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn__color-1,
+.btn__color-2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn__color-1:hover,
+.btn__color-2:hover {
+    cursor: pointer;
+}
+
+.btn__color-1,
+.btn__color-2:hover {
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+.btn__color-1:hover {
+    background: rgb(0, 0, 0);
+}
+
+.btn__color-2{
+    background: none;
+}
+
+.btn__color-2:hover {
+    border: rgb(225, 225, 225) 0.1rem solid;
+}
+
+.btn-container {
+    gap: 1rem;
+}
+
+/* ==========================================================================
+   5. ABOUT ME SECTION STYLES
+   ========================================================================== */
+.about-img-box {
+    display: flex;
+    justify-content: center;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    min-width: 0;
+}
+
+.info-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    min-width: 0;
+}
+
+.card-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.75rem;
+}
+
+.info-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+}
+
+.info-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.about-narrative {
+    color: #475569;
+    font-size: 1rem;
+}
+
+#about.section-wrapper {
+    background-color: #cbd5e1;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    align-items: center;
+}
+
+#about .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   6. SKILLS & EXPERIENCE SECTION STYLES
+   ========================================================================== */
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.tech-panel {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2.25rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.panel-title {
+    font-size: 1.25rem;
+    color: #334155;
+    margin-bottom: 1.75rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.check-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.skill-name {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #0f172a;
+}
+
+/* ==========================================================================
+   7. PROJECT PLACEHOLDER SECTION STYLES
+   ========================================================================== */
+.placeholder-project-card {
+    background: #ffffff;
+    border: 2px dashed #cbd5e1;
+    border-radius: 16px;
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.placeholder-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.placeholder-project-card h3 {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+}
+
+.placeholder-project-card p {
+    color: #64748b;
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    align-items: center;
+}
+
+#projects.section-wrapper {
+    background-color: #cbd5e1;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    align-items: center;
+}
+
+.section-tagline {
+    text-align: center;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.container {
+    align-items: center;
+}
+
+/*CONTACT*/
+
+#contact {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.contact-info--upper-container {
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+    margin: 0.1rem;
+    padding: 0.5rem;
+    overflow: hidden;
+}
+
+.contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.contact-info-container p {
+    font-size: larger;
+}
+
+.contact-icon {
+    cursor: default;
+}
+
+.email-icon {
+    height: 3rem;
+}
+
+/*FOOTER SECTION*/
+
+footer {
+    background-color: #0f172a; /* Sophisticated deep slate dark footer tone */
+    color: #94a3b8;
+    padding: 4rem 0 3rem;
+    text-align: center;
+    margin-block-end: 28px;
+    margin-bottom: 28px;
+}
+
+.foot { 
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-bottom: 0rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.copyright {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+
